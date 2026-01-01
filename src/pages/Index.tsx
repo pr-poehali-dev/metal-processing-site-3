@@ -149,7 +149,7 @@ const Index = () => {
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
                 <CardContent className="p-0 overflow-hidden">
-                  <div className="aspect-video overflow-hidden">
+                  <div className="aspect-[4/5] overflow-hidden">
                     <img 
                       src={service.image} 
                       alt={service.title}
@@ -157,8 +157,7 @@ const Index = () => {
                     />
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-heading font-semibold mb-3">{service.title}</h3>
-                    <p className="text-muted-foreground">{service.description}</p>
+                    <h3 className="text-xl font-heading font-semibold text-center">{service.title}</h3>
                   </div>
                 </CardContent>
               </Card>
