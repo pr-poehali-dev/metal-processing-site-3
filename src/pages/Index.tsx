@@ -90,7 +90,7 @@ const Index = () => {
               <button onClick={() => scrollToSection('about')} className="hover:text-primary transition-colors">О нас</button>
               <button onClick={() => scrollToSection('contacts')} className="hover:text-primary transition-colors">Контакты</button>
             </div>
-            <Button onClick={() => scrollToSection('order')} className="hidden md:inline-flex">
+            <Button onClick={() => scrollToSection('order')} className="hidden md:inline-flex border-2 border-accent">
               Оставить заявку
             </Button>
           </div>
@@ -110,11 +110,11 @@ const Index = () => {
                 Работаем с черными и цветными металлами любой сложности.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" onClick={() => scrollToSection('order')} className="bg-primary hover:bg-primary/90">
+                <Button size="lg" onClick={() => scrollToSection('order')} className="bg-primary hover:bg-primary/90 border-2 border-accent">
                   Получить расчет
                   <Icon name="ArrowRight" size={20} className="ml-2" />
                 </Button>
-                <Button size="lg" variant="outline" onClick={() => scrollToSection('services')}>
+                <Button size="lg" variant="outline" onClick={() => scrollToSection('services')} className="border-2 border-accent">
                   Наши услуги
                 </Button>
               </div>
@@ -145,7 +145,7 @@ const Index = () => {
             {services.map((service, idx) => (
               <Card 
                 key={idx} 
-                className="group hover:shadow-xl hover:scale-105 transition-all duration-300 animate-fade-in border-border bg-secondary"
+                className="group hover:shadow-xl hover:scale-105 transition-all duration-300 animate-fade-in border-2 border-accent bg-secondary"
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
                 <CardContent className="p-0 overflow-hidden">
@@ -196,7 +196,7 @@ const Index = () => {
               <img 
                 src="https://cdn.poehali.dev/projects/5d911962-5b6f-45de-ba4c-88ba2ea2ff8c/files/dbbd0eae-d52a-4fd9-aae4-f04bdf258cea.jpg" 
                 alt="О компании" 
-                className="rounded-lg shadow-xl"
+                className="rounded-lg shadow-xl border-2 border-accent"
               />
             </div>
             <div className="animate-fade-in">
@@ -237,7 +237,7 @@ const Index = () => {
               Заполните форму и мы свяжемся с вами для расчета стоимости
             </p>
           </div>
-          <Card className="animate-scale-in border-border bg-card">
+          <Card className="animate-scale-in border-2 border-accent bg-card">
             <CardContent className="p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -285,7 +285,7 @@ const Index = () => {
                     className="mt-2 min-h-32"
                   />
                 </div>
-                <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90">
+                <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90 border-2 border-accent">
                   Отправить заявку
                   <Icon name="Send" size={20} className="ml-2" />
                 </Button>
@@ -301,21 +301,21 @@ const Index = () => {
             <h2 className="text-4xl font-heading font-bold mb-4">Контакты</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <Card className="text-center animate-fade-in border-border bg-secondary">
+            <Card className="text-center animate-fade-in border-2 border-accent bg-secondary">
               <CardContent className="p-6">
                 <Icon name="MapPin" size={32} className="text-primary mx-auto mb-4" />
                 <h3 className="font-heading font-semibold mb-2">Адрес</h3>
                 <p className="text-muted-foreground">г. Москва, ул. Промышленная, д. 15</p>
               </CardContent>
             </Card>
-            <Card className="text-center animate-fade-in border-border bg-secondary" style={{ animationDelay: '100ms' }}>
+            <Card className="text-center animate-fade-in border-2 border-accent bg-secondary" style={{ animationDelay: '100ms' }}>
               <CardContent className="p-6">
                 <Icon name="Phone" size={32} className="text-primary mx-auto mb-4" />
                 <h3 className="font-heading font-semibold mb-2">Телефон</h3>
                 <p className="text-muted-foreground">+7 (495) 123-45-67</p>
               </CardContent>
             </Card>
-            <Card className="text-center animate-fade-in border-border bg-secondary" style={{ animationDelay: '200ms' }}>
+            <Card className="text-center animate-fade-in border-2 border-accent bg-secondary" style={{ animationDelay: '200ms' }}>
               <CardContent className="p-6">
                 <Icon name="Mail" size={32} className="text-primary mx-auto mb-4" />
                 <h3 className="font-heading font-semibold mb-2">Email</h3>
