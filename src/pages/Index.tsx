@@ -31,22 +31,22 @@ const Index = () => {
 
   const services = [
     {
-      icon: 'Scissors',
+      image: 'https://cdn.poehali.dev/projects/5d911962-5b6f-45de-ba4c-88ba2ea2ff8c/files/2d262a06-f567-4390-9d1e-25f95eb8ea7f.jpg',
       title: 'Лазерная резка',
       description: 'Высокоточная резка металла толщиной до 20 мм с минимальными допусками'
     },
     {
-      icon: 'Move',
+      image: 'https://cdn.poehali.dev/projects/5d911962-5b6f-45de-ba4c-88ba2ea2ff8c/files/cbac4ed3-ef5a-4ca5-84b7-d5109318427f.jpg',
       title: 'Гибка металла',
       description: 'Гибка листового металла на современном оборудовании до 3000 мм'
     },
     {
-      icon: 'Zap',
+      image: 'https://cdn.poehali.dev/projects/5d911962-5b6f-45de-ba4c-88ba2ea2ff8c/files/b456b5bb-a65e-433b-8cbe-8bb401104516.jpg',
       title: 'Сварка',
       description: 'Все виды сварочных работ: MIG, TIG, контактная сварка'
     },
     {
-      icon: 'Paintbrush',
+      image: 'https://cdn.poehali.dev/projects/5d911962-5b6f-45de-ba4c-88ba2ea2ff8c/files/9a9bd566-be13-49ef-885d-e477eb186a13.jpg',
       title: 'Покраска',
       description: 'Порошковая и жидкая окраска с предварительной подготовкой поверхности'
     }
@@ -148,12 +148,18 @@ const Index = () => {
                 className="group hover:shadow-xl hover:scale-105 transition-all duration-300 animate-fade-in border-border bg-secondary"
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
-                <CardContent className="p-6">
-                  <div className="mb-4 p-3 bg-primary/10 rounded-lg w-fit">
-                    <Icon name={service.icon} size={32} className="text-primary" />
+                <CardContent className="p-0 overflow-hidden">
+                  <div className="aspect-video overflow-hidden">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
                   </div>
-                  <h3 className="text-xl font-heading font-semibold mb-3">{service.title}</h3>
-                  <p className="text-muted-foreground">{service.description}</p>
+                  <div className="p-6">
+                    <h3 className="text-xl font-heading font-semibold mb-3">{service.title}</h3>
+                    <p className="text-muted-foreground">{service.description}</p>
+                  </div>
                 </CardContent>
               </Card>
             ))}
